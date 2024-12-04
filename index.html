@@ -74,7 +74,29 @@
         document.getElementById('submit').addEventListener('click', function() {
             var name = document.getElementById('name').value.toLowerCase();
             let type =document.querySelector('h1 p');
-            let randomTexts = ["Courageous", "Compassionate ", "Optimistic", "Honest ", "Generous "];
+            let randomTexts = [
+                "Courageous", 
+                "Compassionate", 
+                "Optimistic", 
+                "Honest", 
+                "Generous", 
+                "Empathetic", 
+                "Resilient", 
+                "Innovative", 
+                "Adventurous", 
+                "Diligent", 
+                "Dependable", 
+                "Gracious", 
+                "Inspiring", 
+                "Thoughtful", 
+                "Enthusiastic", 
+                "Charismatic", 
+                "Kind-hearted", 
+                "Resourceful", 
+                "Visionary", 
+                "Passionate"
+            ];
+
             switch (name) {
                 case "imam":                
                     type.textContent = "Desh";
@@ -86,7 +108,7 @@
                     type.style.color = "red";
                     alert(`Please ${name}, Enter your full name.`)
                     break;
-                    case "mushfique":
+                    case "mushfiqure":
                     type.textContent = "Savage";
                     type.style.color = "red";
                     alert(`Please ${name}, Enter your full name.`)
