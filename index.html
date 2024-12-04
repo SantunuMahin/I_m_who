@@ -21,8 +21,9 @@
 
         h3 {
             margin: 0 0 20px;
-            font-weight: 300;
-            background-color: rgb(255, 255, 255);
+            font-weight: 500;
+            color: rgb(255, 255, 255);
+            /* background-color: rgba(255, 255, 255, 0.709); */
             padding: 10px;
             border-radius: 5px;
         }
@@ -35,68 +36,48 @@
             padding: 10px;
             margin: 5px;
             border: none;
+            
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background-color: rgb(255, 255, 255);
+            background-color: rgba(255, 255, 255, 0.928);
         }
 
         input[type="submit"] {
-            background-color: #007BFF;
-            color: white;
+            background-color: #00ffff8d;
+            color: rgb(0, 0, 0);
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #06f8f0;
         }
 
         h1 {
             margin: 20px 0 0;
-            font-weight: 700;
-            background-color: rgb(255, 255, 255);
+            color: rgba(255, 255, 255, 0.885);
+            font-weight: 300;
+            background-color:  #06f8f096;
             padding: 10px;
             border-radius: 5px;
         }
 
         p {
             display: inline;
-            font-weight: 300;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
-    <h3>You are,"who"?</h3>
+    <h3>You are, "who"?</h3>
     <input id="name" type="text" placeholder="Enter your name">
     <input id="submit" type="submit" value="submit">
-    <h1>You are a: <p></p></h1>
+    <h1>You are a/an: <p></p></h1>
     <script>
         document.getElementById('submit').addEventListener('click', function() {
             var name = document.getElementById('name').value.toLowerCase();
             let type =document.querySelector('h1 p');
-            let randomTexts = [
-                "Courageous", 
-                "Compassionate", 
-                "Optimistic", 
-                "Honest", 
-                "Generous", 
-                "Empathetic", 
-                "Resilient", 
-                "Innovative", 
-                "Adventurous", 
-                "Diligent", 
-                "Dependable", 
-                "Gracious", 
-                "Inspiring", 
-                "Thoughtful", 
-                "Enthusiastic", 
-                "Charismatic", 
-                "Kind-hearted", 
-                "Resourceful", 
-                "Visionary", 
-                "Passionate"
-            ];
-
+            let randomTexts = ["Courageous", "Compassionate ", "Optimistic", "Honest ", "Generous "];
             switch (name) {
                 case "imam":                
                     type.textContent = "Desh";
@@ -108,7 +89,7 @@
                     type.style.color = "red";
                     alert(`Please ${name}, Enter your full name.`)
                     break;
-                    case "mushfiqure":
+                    case "mushfique":
                     type.textContent = "Savage";
                     type.style.color = "red";
                     alert(`Please ${name}, Enter your full name.`)
@@ -131,7 +112,7 @@
                         if (name.length >= 10) {
                         let randomIndex = Math.floor(Math.random() * randomTexts.length);
                         type.textContent = randomTexts[randomIndex]; 
-                        type.style.color = "green";
+                        type.style.color = "#16F702";
                     }
                     }
                     break;
